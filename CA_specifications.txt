@@ -1,0 +1,30 @@
+A cellular automaton is a model of computation composed of cells, each in one of a finite number of states. For
+each cell, a set of cells called its neighborhood is defined. At the beginning of computation (time t=0), each cell
+is assigned a state. The states of all its cells determine the state of the automaton. The automaton progresses
+from its current state at time t to the next state at time t+1 by updating the states of its cells using an update
+rule. This rule defines a relation between the neighborhood of a cell at time t and the state of the cell at time
+t+1. The rule is typically deterministic and is applied for each cell in the current state simultaneously.
+In an elementary cellular automaton, cells are arranged in a one-dimensional array and each cell is in 0 or
+1 state denoting on and off cells, respectively. An automaton of 31 cells, with cells at positions 0, 1, 12, 15, 18,
+and 29 on (counting from left to right starting from zero) and the other cells off, is shown below.
+
+1100000000001001001000000000010
+
+The input will list instructions, one
+per input line, each terminating with “\n”, that is, one newline character. The input specifies how to configure
+and execute an elementary cellular automaton and to collect basic statistics about the evolution of its states. The
+following file test0.txt uses seven lines to specify an example input to your program.
+
+1. 31
+2. 30
+3. **..........*..*..*..........*.
+4. 10
+5. 0,5
+6. 30,10
+
+Lines 1–3 in the test0.txt file specify a configuration of the automaton. Line 1 defines the size of the au-
+tomaton, that is, the number of cells in the array. Line 2 specifies the code of the update rule, whereas line 3
+encodes the cell states, with “*” encoding on states and “.” encoding off states. Hence, line 3 specifies the
+example automaton discussed in the Background section. Line 4 specifies the number of time steps to evolve the
+automaton in Stage 1 of the program. Finally, lines 5 and 6 are instructions to analyze the evolution of states of
+cells at specific positions in the automaton in Stages 1 and 2 of the program, respectively.
